@@ -1,0 +1,289 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: my-wordpress-plugin-info\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-07-16 17:01+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Константин Леонов <rublezoid@gmail.com>\n"
+"Language-Team: minimus <minimus@blogovod.co.cc>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: BELARUS\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;__;__ngettext:1,2;__ngettext_noop:1,2;_c\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: my-wordpress-plugin-info.php:123
+msgid "Current version"
+msgstr "Текущая версия"
+
+#: my-wordpress-plugin-info.php:124
+#: my-wordpress-plugin-info.php:145
+#: tinymce/plugins/mwpi/dialog.php:52
+msgid "Author"
+msgstr "Автор"
+
+#: my-wordpress-plugin-info.php:127
+msgid "Requires Wordpress version"
+msgstr "Требуемая версия Wordpress"
+
+#: my-wordpress-plugin-info.php:127
+msgid "or higher"
+msgstr "или выше"
+
+#: my-wordpress-plugin-info.php:128
+msgid "Compatible up to"
+msgstr "Совместим вплоть до"
+
+#: my-wordpress-plugin-info.php:129
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: my-wordpress-plugin-info.php:130
+msgid "Number of ratings"
+msgstr "Количество поданных голосов"
+
+#: my-wordpress-plugin-info.php:130
+#: my-wordpress-plugin-info.php:166
+#, php-format
+msgid "%d vote"
+msgid_plural "%d votes"
+msgstr[0] "%d голос"
+msgstr[1] "%d голоса"
+msgstr[2] "%d голосов"
+
+#: my-wordpress-plugin-info.php:132
+#, php-format
+msgid "%s hit"
+msgid_plural "%s hits"
+msgstr[0] "%s раз"
+msgstr[1] "%s раза"
+msgstr[2] "%s раз"
+
+#: my-wordpress-plugin-info.php:133
+msgid "Last updated"
+msgstr "Последнее обновление"
+
+#: my-wordpress-plugin-info.php:134
+msgid "Plugin homepage"
+msgstr "Домашняя страница плагина"
+
+#: my-wordpress-plugin-info.php:135
+msgid "Download"
+msgstr "Скачать"
+
+#: my-wordpress-plugin-info.php:136
+msgid "Tags"
+msgstr "Метки"
+
+#: tinymce/plugins/mwpi/dialog.php:32
+msgid "Slug"
+msgstr "Ярлык"
+
+#: tinymce/plugins/mwpi/dialog.php:36
+msgid "Output Mode"
+msgstr "Режим вывода"
+
+#: tinymce/plugins/mwpi/dialog.php:39
+msgid "API (As Is)"
+msgstr "API (как есть)"
+
+#: tinymce/plugins/mwpi/dialog.php:40
+msgid "Formated"
+msgstr "Форматированные данные"
+
+#: tinymce/plugins/mwpi/dialog.php:41
+msgid "Info Block"
+msgstr "Инфо-блок"
+
+#: tinymce/plugins/mwpi/dialog.php:46
+msgid "Output Data"
+msgstr "Данные"
+
+#: tinymce/plugins/mwpi/dialog.php:49
+msgid "Plugin Name"
+msgstr "Название плагина"
+
+#: tinymce/plugins/mwpi/dialog.php:50
+msgid "Plugin Slug"
+msgstr "Ярлык плагина"
+
+#: tinymce/plugins/mwpi/dialog.php:51
+msgid "Current Version"
+msgstr "Текущая версия"
+
+#: tinymce/plugins/mwpi/dialog.php:53
+msgid "Author Profile"
+msgstr "Профиль автора"
+
+#: tinymce/plugins/mwpi/dialog.php:54
+msgid "Required Wordpress Version"
+msgstr "Минимальная версия Wordpress"
+
+#: tinymce/plugins/mwpi/dialog.php:55
+msgid "High Wordpress version tested"
+msgstr "Тестировался до версии Wordpress"
+
+#: tinymce/plugins/mwpi/dialog.php:56
+msgid "Rating (%)"
+msgstr "Рейтинг (%)"
+
+#: tinymce/plugins/mwpi/dialog.php:57
+msgid "Number of Votes"
+msgstr "Количество поданных голосов"
+
+#: tinymce/plugins/mwpi/dialog.php:58
+msgid "Rating (stars)"
+msgstr "Рейтинг (звёзды)"
+
+#: tinymce/plugins/mwpi/dialog.php:59
+msgid "Number of Downloads"
+msgstr "Количество скачиваний"
+
+#: tinymce/plugins/mwpi/dialog.php:60
+msgid "Last Updated"
+msgstr "Последнее обновление"
+
+#: tinymce/plugins/mwpi/dialog.php:61
+msgid "Plugin Homepage"
+msgstr "Домашняя страница плагина"
+
+#: tinymce/plugins/mwpi/dialog.php:62
+msgid "Plugin Download Link"
+msgstr "Ссылка на файл"
+
+#: tinymce/plugins/mwpi/dialog.php:63
+msgid "Plugin Tags"
+msgstr "Метки плагина"
+
+#: tinymce/plugins/mwpi/dialog.php:64
+msgid "Plugin \"Description\" Section"
+msgstr "Секция \"Описание\""
+
+#: tinymce/plugins/mwpi/dialog.php:65
+msgid "Plugin \"Installation\" Section"
+msgstr "Секция \"Установка\""
+
+#: tinymce/plugins/mwpi/dialog.php:66
+msgid "Plugin FAQ Section"
+msgstr "Секция ЧАВО"
+
+#: tinymce/plugins/mwpi/dialog.php:67
+msgid "Plugin \"Screenshots\" Section"
+msgstr "Секция \"Скриншоты\""
+
+#: tinymce/plugins/mwpi/dialog.php:68
+msgid "Plugin \"Change Log\" Section"
+msgstr "Секция \"Журнал изменений\""
+
+#: tinymce/plugins/mwpi/dialog.php:69
+msgid "Plugin \"Other Notes\" Section"
+msgstr "Секция \"Другие примечания\""
+
+#: tinymce/plugins/mwpi/dialog.php:76
+msgid "Cancel"
+msgstr "Отмена"
+
+#: tinymce/plugins/mwpi/dialog.php:79
+msgid "Insert"
+msgstr "Вставить"
+
+#~ msgid "%s ago"
+#~ msgstr "%s назад"
+#~ msgid "No Comments"
+#~ msgstr "Нет комментариев"
+#~ msgid "One Comment"
+#~ msgstr "Один комментарий"
+#~ msgid "%d Comment"
+#~ msgid_plural "%d Comments"
+#~ msgstr[0] "%d комментарий"
+#~ msgstr[1] "%d комментария"
+#~ msgstr[2] "%d комментариев"
+#~ msgid "Leave a Comment"
+#~ msgstr "Оставьте комментарий"
+#~ msgid "Special Text Boxes"
+#~ msgstr "Подсветка текста"
+#~ msgid "Basic Settings"
+#~ msgstr "Основные параметры"
+#~ msgid "Select border style for Special Text Boxes"
+#~ msgstr "Выбор стиля рамки блока специального текста"
+#~ msgid "Selecting \"None\" will disable Special Text Boxes border."
+#~ msgstr ""
+#~ "Выбрав \"Без рамки\", Вы запретите прорисовку рамки блока специального "
+#~ "текста. "
+#~ msgid "Define top margin for Special Text Boxes"
+#~ msgstr "Верхний отступ специального текста"
+#~ msgid "This is a gap between top edge of Special Text Box and text above."
+#~ msgstr ""
+#~ "Этот параметр определяет промежуток между верхним краем блока "
+#~ "специального текста и текстом (елементом) расположенным выше."
+#~ msgid "Define left margin for Special Text Boxes"
+#~ msgstr "Левый отступ специального текста"
+#~ msgid ""
+#~ "This is a gap between left edge of Special Text Box and left edge of post "
+#~ "area."
+#~ msgstr ""
+#~ "Этот параметр определяет промежуток между левым краем блока специального "
+#~ "текста и левым краем области статьи."
+#~ msgid "Define right margin for Special Text Boxes"
+#~ msgstr "Правый отступ специального текста"
+#~ msgid ""
+#~ "This is a gap between right edge of Special Text Box and right edge of "
+#~ "post area."
+#~ msgstr ""
+#~ "Этот параметр определяет промежуток между правым краем блока специального "
+#~ "текста и правым краем области статьи."
+#~ msgid "Define bottom margin for Special Text Boxes"
+#~ msgstr "Нижний отступ специального текста"
+#~ msgid ""
+#~ "This is a gap between bottom edge of Special Text Box and text below."
+#~ msgstr ""
+#~ "Этот параметр определяет промежуток между нижним краем блока специального "
+#~ "текста и текстом (елементом) расположенным ниже."
+#~ msgid "Extended Settings"
+#~ msgstr "Дополнительные параметры"
+#~ msgid ""
+#~ "Parameters below add elements of CSS3 standard to Style Sheet. Not all "
+#~ "browsers can interpret this elements properly, but including this "
+#~ "elements to HTML page not crash browser."
+#~ msgstr ""
+#~ "Использование следующих параметров добавляет в таблицу стилей елементы "
+#~ "стандарта CSS3. Не все браузеры могут интерпретировать эти элементы "
+#~ "должным образом, но использование этих элементов не приводит к сбою в "
+#~ "работе браузера."
+#~ msgid "Allow rounded corners for Special Text Boxes?"
+#~ msgstr "Разрешить использование закруглённых углов?"
+#~ msgid "Selecting \"No\" will disable Special Text Boxes rounded corners."
+#~ msgstr "Выбрав \"Нет\", Вы запретите прорисовку закруглённых углов. "
+#~ msgid "Yes"
+#~ msgstr "Да"
+#~ msgid "No"
+#~ msgstr "Нет"
+#~ msgid "Allow box shadow for Special Text Boxes?"
+#~ msgstr "Разрешить использование тени блока специального текста?"
+#~ msgid "Selecting \"No\" will disable Special Text Boxes shadow."
+#~ msgstr ""
+#~ "Выбрав \"Нет\", Вы запретите прорисовку тени блока специального текста. "
+#~ msgid "Allow text shadow for Special Text Boxes?"
+#~ msgstr "Разрешить использование теней текста?"
+#~ msgid "Selecting \"No\" will disable Special Text Boxes text shadow."
+#~ msgstr "Выбрав \"Нет\", Вы запретите прорисовку теней текста. "
+#~ msgid "Special Text Boxes Settings Updated."
+#~ msgstr "Параметры подсветки специального текста сохранены."
+#~ msgid "Special Text Boxes Settings"
+#~ msgstr "Параметры подсветки специального текста"
+#~ msgid "Update Settings"
+#~ msgstr "Сохранить параметры"
+#~ msgid "Solid"
+#~ msgstr "Сплошная линия"
+#~ msgid "Dashed"
+#~ msgstr "Пунктир"
+#~ msgid "Dotted"
+#~ msgstr "Точки"
+#~ msgid "None"
+#~ msgstr "Без рамки"
+
