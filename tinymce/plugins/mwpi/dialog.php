@@ -30,7 +30,7 @@ require_once(ABSPATH.'/wp-admin/admin.php');
     <table border="0" cellpadding="4" cellspacing="0">
 		  <tr>
 			  <td nowrap="nowrap"><label for="mwpi_slug"><?php _e('Slug', 'my-wordpress-plugin-info').':'; ?></label></td>
-			  <td><textarea id="mwpi_slug" name="mwpi_slug" style="height: 22px; width: 200px"></textarea></td>
+			  <td><input id="mwpi_slug" name="mwpi_slug" style="width: 200px"/></td>
 		  </tr>
 		  <tr>
 			  <td nowrap="nowrap"><label for="mwpi_mode"><?php _e('Output Mode', 'my-wordpress-plugin-info').':'; ?></label></td>
@@ -38,7 +38,6 @@ require_once(ABSPATH.'/wp-admin/admin.php');
 				  <select id="mwpi_mode" name="mwpi_mode" style="width: 200px">
 				    <option value="api"><?php _e('API (As Is)', 'my-wordpress-plugin-info'); ?></option>
 				    <option value="fmt"><?php _e('Formated', 'my-wordpress-plugin-info'); ?></option>
-				    <option value="block"><?php _e('Info Block', 'my-wordpress-plugin-info'); ?></option>
 				  </select>
 				</td>
 		  </tr>

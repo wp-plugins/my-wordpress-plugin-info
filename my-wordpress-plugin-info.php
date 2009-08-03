@@ -3,7 +3,7 @@
 Plugin Name: My WP Plugin Info
 Plugin URI: http://simplelib.co.cc/?p=195
 Description: Recieves info of any plugin from wordpress.org plugins repository. Visit <a href="http://simplelib.co.cc/">SimpleLib blog</a> for more details.
-Version: 0.3.8
+Version: 1.0.11
 Author: minimus
 Author URI: http://blogovod.co.cc
 */
@@ -38,6 +38,7 @@ if ( !class_exists( 'MyWpPluginInfo' ) ) {
 			add_filter('tiny_mce_version', array(&$this, 'tinyMCEVersion') );
 			add_action('init', array(&$this, 'addButtons'));
 			add_shortcode('mwpi', array(&$this, 'doShortCode'));
+			add_shortcode('mwpi_block', array(&$this, 'doShortCodeBlock'));
 		}
 		
 		function getPluginInfo ( $slug = null ) {
@@ -181,6 +182,26 @@ if ( !class_exists( 'MyWpPluginInfo' ) ) {
 			return $content;
 		}
 		
+		function getPluginInfoBlock( $slug = null, $content = null, $mode = null ) {
+			if ( empty( $slug ) ) return false;
+			
+			$plugin = $this->getPluginInfo( $slug );
+			
+			if ( empty( $plugin ) ) return false;
+			
+			$prefix = "<strong><a href='http://wordpress.org/extend/plugins/{$slug}/'>{$plugin['name']}</a></strong> ";
+			switch ( $mode ) {
+				case 'info':
+				  $suffix = __('Author', 'my-wordpress-plugin-info').': '.$plugin['author'].', '.__('version', 'my-wordpress-plugin-info').': '.$plugin['version'].', '.__('updated', 'my-wordpress-plugin-info').': '.date(get_option('date_format'), strtotime($plugin['last_updated'])).', <br/>'.__('Requires WP version', 'my-wordpress-plugin-info').': '.$plugin['requires'].' '.__('or higher', 'my-wordpress-plugin-info').', '.__('tested up to', 'my-wordpress-plugin-info').': '.$plugin['tested'].'. <br/>'.$this->buildRatingRaw($plugin['rating']).' ('.sprintf( __ngettext( "%d vote", "%d votes", $plugin[ 'num_ratings' ], "my-wordpress-plugin-info" ), $plugin[ 'num_ratings' ] ).')';
+				  break;
+		    case 'download':
+		      $suffix = __('Author', 'my-wordpress-plugin-info').': '.$plugin['author'].', '.__('version', 'my-wordpress-plugin-info').': '.$plugin['version'].', '.__('updated', 'my-wordpress-plugin-info').': '.date(get_option('date_format'), strtotime($plugin['last_updated'])).', <br/>'.__('Requires WP version', 'my-wordpress-plugin-info').': '.$plugin['requires'].' '.__('or higher', 'my-wordpress-plugin-info').', '.__('tested up to', 'my-wordpress-plugin-info').': '.$plugin['tested'].'.<br/>'.'<a href="'.$plugin['download_link'].'">'.__('Download', 'my-wordpress-plugin-info').'</a> ('.sprintf( __ngettext( "%s hit", "%s hits", $plugin['downloaded'], "my-wordpress-plugin-info" ), number_format($plugin['downloaded'], 0, ',', ' ')).') '.$this->buildRatingRaw($plugin['rating']).' ('.sprintf( __ngettext( "%d vote", "%d votes", $plugin[ 'num_ratings' ], "my-wordpress-plugin-info" ), $plugin[ 'num_ratings' ] ).')';
+		      break;
+			}
+			$content = '<p>'.$prefix.'<br/>'.$content.'</p><p>'.$suffix.'</p>';
+			return $content;
+		}
+		
 		function doShortCode( $atts, $content = null ) {
 			extract( shortcode_atts( array(
 				'slug' => '',
@@ -206,6 +227,19 @@ if ( !class_exists( 'MyWpPluginInfo' ) ) {
 			
 		}
 		
+		function doShortCodeBlock( $atts, $content = null ) {
+			extract( shortcode_atts( array(
+				'slug' => '',
+				'mode' => 'info'), 
+				$atts ) );
+				
+			$plugin = array();
+			if ( $slug !== '' ) {
+				return $this->getPluginInfoBlock( $slug, do_shortcode( $content ), $mode );
+			}
+			else return __('Plugin Slug not Defined!', 'my-wordpress-plugin-info');
+		}
+		
 		function addButtons() {
 			// Don't bother doing this stuff if the current user lacks permissions
       if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') )
@@ -219,11 +253,11 @@ if ( !class_exists( 'MyWpPluginInfo' ) ) {
 		}
 		
 		function registerButton( $buttons ) {
-			array_push($buttons, "separator", "mwpi");
+			array_push($buttons, "separator", "mwpi", "mwpi_block");
       return $buttons;
 		}
 		
-		function addTinyMCEPlugin() {
+		function addTinyMCEPlugin( $plugin_array ) {
 			$plugin_array['mwpi'] = plugins_url('my-wordpress-plugin-info/tinymce/plugins/mwpi/editor_plugin.js');
       return $plugin_array;
 		}

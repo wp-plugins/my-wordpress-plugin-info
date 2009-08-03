@@ -7,12 +7,12 @@ function insertMWPICode() {
 	var mwpiCode;
 	var mwpiSlugObj = document.getElementById('mwpi_slug');
 	var mwpiSlug = mwpiSlugObj.value;
-	var mwpiDataObj = document.getElementById('mwpi_data');
-	var mwpiData = mwpiDataObj.value;
 	var mwpiModeObj = document.getElementById('mwpi_mode');
 	var mwpiMode = mwpiModeObj.value;
+	var contentObj = tinyMCE.getInstanceById('content');
+	var mwpiBody = contentObj.selection.getContent();
 	
-	mwpiCode = ' [mwpi slug ="' + mwpiSlug + '" data="' + mwpiData + '" mode="' + mwpiMode + '"]';
+	mwpiCode = ' [mwpi_block slug ="' + mwpiSlug + '" mode="' + mwpiMode + '"]' + mwpiBody + '[/mwpi_block]]';
 	
 	window.tinyMCE.execInstanceCommand('content', 'mceInsertContent', false, mwpiCode);
 	tinyMCEPopup.editor.execCommand('mceRepaint');
