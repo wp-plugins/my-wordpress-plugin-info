@@ -3,8 +3,8 @@ Contributors: minimus
 Donate link: http://simplelib.co.cc/
 Tags: content, developer, utility, tool, data, info, plugin
 Requires at least: 2.7
-Tested up to: 2.8.2
-Stable tag: 1.0.12
+Tested up to: 2.8.3
+Stable tag: 1.0.13
 
 Recieves info of any plugin from wordpress.org plugins repository.
 
@@ -36,7 +36,7 @@ If you have created your own language pack, or have an update of an existing one
 
 * 0.3.8
 	* Initial upload
-* 1.0.12
+* 1.0.13
 	* new block output modes added
 	* block short codes added
 	* some bugs fixed

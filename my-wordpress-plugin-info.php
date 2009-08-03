@@ -3,7 +3,7 @@
 Plugin Name: My WP Plugin Info
 Plugin URI: http://simplelib.co.cc/?p=195
 Description: Recieves info of any plugin from wordpress.org plugins repository. Visit <a href="http://simplelib.co.cc/">SimpleLib blog</a> for more details.
-Version: 1.0.12
+Version: 1.0.13
 Author: minimus
 Author URI: http://blogovod.co.cc
 */
