@@ -12,7 +12,7 @@ function insertMWPICode() {
 	var contentObj = tinyMCE.getInstanceById('content');
 	var mwpiBody = contentObj.selection.getContent();
 	
-	mwpiCode = ' [mwpi_block slug ="' + mwpiSlug + '" mode="' + mwpiMode + '"]' + mwpiBody + '[/mwpi_block]]';
+	mwpiCode = ' [mwpi_block slug ="' + mwpiSlug + '" mode="' + mwpiMode + '"]' + mwpiBody + '[/mwpi_block]';
 	
 	window.tinyMCE.execInstanceCommand('content', 'mceInsertContent', false, mwpiCode);
 	tinyMCEPopup.editor.execCommand('mceRepaint');
